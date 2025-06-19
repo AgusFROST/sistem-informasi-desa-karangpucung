@@ -1,0 +1,1 @@
+ln -s /home/u618052227/domains/pemdes-karangpucung.com/pemdesKarpuc/storage/app/public/ /home/u618052227/domains/pemdes-karangpucung.com/public_html/storage

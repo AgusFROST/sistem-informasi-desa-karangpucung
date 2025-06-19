@@ -1,0 +1,43 @@
+@extends('layouts.backend')
+
+@section('main')
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Tambah Media Sosial</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+
+        <form method="POST" action="{{ route('media-sosial.store') }}">
+            @csrf
+            <div class="mb-3">
+                <label for="medsos_svg_id" class="form-label">Pilih Media Sosial</label>
+                <select name="medsos_svg_id" id="medsos_svg_id" class="form-control" required>
+                    <option value="">Pilih</option>
+                    @foreach ($medsosSvgs as $svg)
+                    <option value="{{ $svg->id }}">{{ $svg->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="url" class="form-label">URL</label>
+                <input type="url" name="url" id="url" class="form-control" value="{{ old('url') }}" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="{{ route('media-sosial.index') }}" class="btn btn-secondary">Kembali</a>
+        </form>
+    </div>
+</div>
+
+@endsection
