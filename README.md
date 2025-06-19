@@ -1,6 +1,6 @@
 # Sistem Informasi Karangpucung
 
-Aplikasi Laravel untuk pengelolaan informasi desa Karangpucung. Dibangun dengan Laravel 8 dan SQLite.
+Aplikasi Laravel untuk pengelolaan informasi desa Karangpucung. Dibangun dengan Laravel 11 dan SQLite.
 
 ## Cara Install
 1. Clone repo ini
