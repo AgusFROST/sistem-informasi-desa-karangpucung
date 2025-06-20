@@ -25,26 +25,7 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Admin'],
         ]);
 
-        User::create([
-            // 'uid' => Str::uuid()->toString(),
-            'uid' => 'c1b003a0-d160-46cf-a604-be08a645ad09',
-            'role_id' => 3,
-            'name' => 'Agus FROST',
-            'username' => 'agusfrost',
-            'email' => 'agusfrost@pemdes-karangpucung.com',
-            'password' => bcrypt('Z+HBT8fI0|Cq')
-        ]);
-
-        User::create([
-            'uid' => Str::uuid()->toString(),
-            'role_id' => 3,
-            'name' => 'Administrator',
-            'username' => 'administrator',
-            'email' => 'admin@pemdes-karangpucung.com',
-            'password' => bcrypt('|p4I$?w&MO&K')
-        ]);
-
-
+      
         RuleCategory::create([
             'name' => 'Peraturan Kepala Desa',
             'slug' => 'peraturan-kepala-desa',
